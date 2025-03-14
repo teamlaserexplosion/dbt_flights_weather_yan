@@ -1,0 +1,15 @@
+version: 2
+sources:
+
+- name: weather_data
+  schema: s_yandyck
+  tables:
+    - name: weather_daily_raw_yan
+    - name: weather_hourly_raw_yan
+
+- name: flights_data
+  schema: s_yandyck
+  tables:
+    - name: flights_yan
+    - name: airports_yan
+    - name: regions_yan
