@@ -1,7 +1,7 @@
 {{ config(materialized='view') }}
 
-WITH flights_yan AS (
+WITH flights AS (
     SELECT * 
-    FROM {{source('flights_data', 'flights_yan')}}
+    FROM {{source('flights_data', 'flights')}}
 )
-SELECT * FROM flights_yan
+SELECT * FROM flights
