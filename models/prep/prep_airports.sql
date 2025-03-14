@@ -9,6 +9,6 @@ SELECT faa
         ,alt
         ,tz
         ,dst
-FROM {{ref('staging_airports')}}
+FROM {{ref('staging_airports_yan')}}
 )
 SELECT * FROM airports_reorder

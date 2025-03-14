@@ -1,6 +1,6 @@
-WITH flights_january AS (
+WITH flights AS (
 SELECT * 
-FROM {{ref('staging_flights_january')}}
+FROM {{ref('staging_flights_yan')}}
 ),
 flights_cleaned AS(
 SELECT flight_date::DATE
@@ -24,6 +24,6 @@ SELECT flight_date::DATE
         ,(distance * 0.621371)::NUMERIC(6,2) AS distance_km
         ,cancelled
         ,diverted
-FROM flights_january
+FROM flights
 )
 SELECT * FROM flights_cleaned
